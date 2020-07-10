@@ -8,9 +8,8 @@ wind.title('Weather App')
 def fetch(fr):
     try:
         zipc=zip.get()
-#        api_r= requests.get(f'http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode={zipc}&distance=5&API_KEY=AD06A07B-CC39-4006-BAC4-B9DBB2B5F8BE')
         key=["353ddfe27aa4b3537c47c975c70b58d9","353ddfe27aa4b3537c47c975c70b58d9"]
-        key ="353ddfe27aa4b3537c47c975c70b58d9"
+        key= random.choice(key)
         p= {"http": "http://111.233.225.166:1234"}
         api_r= requests.get(f"http://api.openweathermap.org/data/2.5/weather?appid={key}&q={zipc}, verify= False, proxies=p")
         """ api = json.loads(api_r.content)

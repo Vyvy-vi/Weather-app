@@ -1,5 +1,5 @@
 from tkinter import *
-from PIL import ImageTk, Image
+# from PIL import ImageTk, Image
 import requests
 import json
 import random
@@ -62,6 +62,7 @@ def fetch(fr):
 Atmospheric pressure: " +str(p) +"hpa\n\
 Humidity: " +str(hum) +"%\n\
 Description: " +str(desc), font=("Helvetica",18), bg=col)
+    #TODO- Add a weather symbol on the side.
     except:
         l.config(fr, text= 'Connection Refused', bg='red')
 #p = [f'{i}:{api[0][i]}' for i in api[0]]
